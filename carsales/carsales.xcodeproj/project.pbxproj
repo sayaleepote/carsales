@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF758D7B265D5B4300C1D009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758D7A265D5B4300C1D009 /* AppDelegate.swift */; };
-		CF758D7F265D5B4300C1D009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758D7E265D5B4300C1D009 /* ViewController.swift */; };
 		CF758D82265D5B4300C1D009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF758D80265D5B4300C1D009 /* Main.storyboard */; };
 		CF758D84265D5B4600C1D009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF758D83265D5B4600C1D009 /* Assets.xcassets */; };
 		CF758D87265D5B4600C1D009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF758D85265D5B4600C1D009 /* LaunchScreen.storyboard */; };
@@ -24,6 +23,8 @@
 		CF758DD6265D676600C1D009 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DCE265D676600C1D009 /* Operation.swift */; };
 		CF758DDF265D67BB00C1D009 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DDE265D67BB00C1D009 /* Car.swift */; };
 		CF758DE7265D69EF00C1D009 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DE6265D69EF00C1D009 /* Result.swift */; };
+		CF758DF6265D77E400C1D009 /* CarsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DF5265D77E400C1D009 /* CarsListViewModel.swift */; };
+		CF758DFE265D7B0900C1D009 /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DFD265D7B0900C1D009 /* CarsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 /* Begin PBXFileReference section */
 		CF758D77265D5B4300C1D009 /* carsales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carsales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF758D7A265D5B4300C1D009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF758D7E265D5B4300C1D009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF758D81265D5B4300C1D009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF758D83265D5B4600C1D009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF758D86265D5B4600C1D009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +67,8 @@
 		CF758DCE265D676600C1D009 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		CF758DDE265D67BB00C1D009 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		CF758DE6265D69EF00C1D009 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CF758DF5265D77E400C1D009 /* CarsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewModel.swift; sourceTree = "<group>"; };
+		CF758DFD265D7B0900C1D009 /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +119,12 @@
 		CF758D79265D5B4300C1D009 /* carsales */ = {
 			isa = PBXGroup;
 			children = (
+				CF758DEC265D74FC00C1D009 /* ViewControllers */,
+				CF758DEB265D74F200C1D009 /* ViewModels */,
 				CF758DDD265D67AD00C1D009 /* Models */,
 				CF758DC5265D676600C1D009 /* Networking */,
 				CF758DC1265D676600C1D009 /* NetworkClient */,
 				CF758D7A265D5B4300C1D009 /* AppDelegate.swift */,
-				CF758D7E265D5B4300C1D009 /* ViewController.swift */,
 				CF758D80265D5B4300C1D009 /* Main.storyboard */,
 				CF758D83265D5B4600C1D009 /* Assets.xcassets */,
 				CF758D85265D5B4600C1D009 /* LaunchScreen.storyboard */,
@@ -209,6 +212,22 @@
 				CF758DE6265D69EF00C1D009 /* Result.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CF758DEB265D74F200C1D009 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DF5265D77E400C1D009 /* CarsListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CF758DEC265D74FC00C1D009 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DFD265D7B0900C1D009 /* CarsListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,15 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF758D7F265D5B4300C1D009 /* ViewController.swift in Sources */,
 				CF758DD4265D676600C1D009 /* Request.swift in Sources */,
 				CF758D7B265D5B4300C1D009 /* AppDelegate.swift in Sources */,
 				CF758DD6265D676600C1D009 /* Operation.swift in Sources */,
+				CF758DFE265D7B0900C1D009 /* CarsListViewController.swift in Sources */,
 				CF758DCF265D676600C1D009 /* GetCarsOperation.swift in Sources */,
 				CF758DD3265D676600C1D009 /* Environment.swift in Sources */,
 				CF758DE7265D69EF00C1D009 /* Result.swift in Sources */,
 				CF758DD2265D676600C1D009 /* NetworkError.swift in Sources */,
 				CF758DDF265D67BB00C1D009 /* Car.swift in Sources */,
+				CF758DF6265D77E400C1D009 /* CarsListViewModel.swift in Sources */,
 				CF758DD0265D676600C1D009 /* CarsalesRequest.swift in Sources */,
 				CF758DD5265D676600C1D009 /* RequestDispatcher.swift in Sources */,
 				CF758DD1265D676600C1D009 /* Response.swift in Sources */,
