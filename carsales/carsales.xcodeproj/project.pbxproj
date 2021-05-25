@@ -14,6 +14,16 @@
 		CF758D87265D5B4600C1D009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF758D85265D5B4600C1D009 /* LaunchScreen.storyboard */; };
 		CF758D92265D5B4600C1D009 /* carsalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758D91265D5B4600C1D009 /* carsalesTests.swift */; };
 		CF758D9D265D5B4600C1D009 /* carsalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758D9C265D5B4600C1D009 /* carsalesUITests.swift */; };
+		CF758DCF265D676600C1D009 /* GetCarsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DC3265D676600C1D009 /* GetCarsOperation.swift */; };
+		CF758DD0265D676600C1D009 /* CarsalesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DC4265D676600C1D009 /* CarsalesRequest.swift */; };
+		CF758DD1265D676600C1D009 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DC7265D676600C1D009 /* Response.swift */; };
+		CF758DD2265D676600C1D009 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DC9265D676600C1D009 /* NetworkError.swift */; };
+		CF758DD3265D676600C1D009 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DCB265D676600C1D009 /* Environment.swift */; };
+		CF758DD4265D676600C1D009 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DCC265D676600C1D009 /* Request.swift */; };
+		CF758DD5265D676600C1D009 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DCD265D676600C1D009 /* RequestDispatcher.swift */; };
+		CF758DD6265D676600C1D009 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DCE265D676600C1D009 /* Operation.swift */; };
+		CF758DDF265D67BB00C1D009 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DDE265D67BB00C1D009 /* Car.swift */; };
+		CF758DE7265D69EF00C1D009 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DE6265D69EF00C1D009 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,16 @@
 		CF758D98265D5B4600C1D009 /* carsalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carsalesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF758D9C265D5B4600C1D009 /* carsalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carsalesUITests.swift; sourceTree = "<group>"; };
 		CF758D9E265D5B4600C1D009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF758DC3265D676600C1D009 /* GetCarsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCarsOperation.swift; sourceTree = "<group>"; };
+		CF758DC4265D676600C1D009 /* CarsalesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsalesRequest.swift; sourceTree = "<group>"; };
+		CF758DC7265D676600C1D009 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CF758DC9265D676600C1D009 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CF758DCB265D676600C1D009 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		CF758DCC265D676600C1D009 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CF758DCD265D676600C1D009 /* RequestDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
+		CF758DCE265D676600C1D009 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		CF758DDE265D67BB00C1D009 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		CF758DE6265D69EF00C1D009 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +117,9 @@
 		CF758D79265D5B4300C1D009 /* carsales */ = {
 			isa = PBXGroup;
 			children = (
+				CF758DDD265D67AD00C1D009 /* Models */,
+				CF758DC5265D676600C1D009 /* Networking */,
+				CF758DC1265D676600C1D009 /* NetworkClient */,
 				CF758D7A265D5B4300C1D009 /* AppDelegate.swift */,
 				CF758D7E265D5B4300C1D009 /* ViewController.swift */,
 				CF758D80265D5B4300C1D009 /* Main.storyboard */,
@@ -123,6 +146,69 @@
 				CF758D9E265D5B4600C1D009 /* Info.plist */,
 			);
 			path = carsalesUITests;
+			sourceTree = "<group>";
+		};
+		CF758DC1265D676600C1D009 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DC4265D676600C1D009 /* CarsalesRequest.swift */,
+				CF758DC2265D676600C1D009 /* NetworkOperations */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		CF758DC2265D676600C1D009 /* NetworkOperations */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DC3265D676600C1D009 /* GetCarsOperation.swift */,
+			);
+			path = NetworkOperations;
+			sourceTree = "<group>";
+		};
+		CF758DC5265D676600C1D009 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DC6265D676600C1D009 /* Response */,
+				CF758DC8265D676600C1D009 /* ErrorHandling */,
+				CF758DCA265D676600C1D009 /* Request */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CF758DC6265D676600C1D009 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DC7265D676600C1D009 /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		CF758DC8265D676600C1D009 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DC9265D676600C1D009 /* NetworkError.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		CF758DCA265D676600C1D009 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DCB265D676600C1D009 /* Environment.swift */,
+				CF758DCC265D676600C1D009 /* Request.swift */,
+				CF758DCD265D676600C1D009 /* RequestDispatcher.swift */,
+				CF758DCE265D676600C1D009 /* Operation.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		CF758DDD265D67AD00C1D009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF758DDE265D67BB00C1D009 /* Car.swift */,
+				CF758DE6265D69EF00C1D009 /* Result.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +342,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF758D7F265D5B4300C1D009 /* ViewController.swift in Sources */,
+				CF758DD4265D676600C1D009 /* Request.swift in Sources */,
 				CF758D7B265D5B4300C1D009 /* AppDelegate.swift in Sources */,
+				CF758DD6265D676600C1D009 /* Operation.swift in Sources */,
+				CF758DCF265D676600C1D009 /* GetCarsOperation.swift in Sources */,
+				CF758DD3265D676600C1D009 /* Environment.swift in Sources */,
+				CF758DE7265D69EF00C1D009 /* Result.swift in Sources */,
+				CF758DD2265D676600C1D009 /* NetworkError.swift in Sources */,
+				CF758DDF265D67BB00C1D009 /* Car.swift in Sources */,
+				CF758DD0265D676600C1D009 /* CarsalesRequest.swift in Sources */,
+				CF758DD5265D676600C1D009 /* RequestDispatcher.swift in Sources */,
+				CF758DD1265D676600C1D009 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
