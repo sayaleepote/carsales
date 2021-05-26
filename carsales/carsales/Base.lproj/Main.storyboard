@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-AG-fon">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-AG-fon">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tjg-b3-oMJ">
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4IR-HM-wyc">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4IR-HM-wyc" customClass="CarsListCollectionViewCell" customModule="carsales" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bvk-7q-JfC">
@@ -80,6 +80,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="312"/>
+                                        <connections>
+                                            <outlet property="carLocation" destination="a6j-UA-vgE" id="buQ-CI-1Ew"/>
+                                            <outlet property="carPrice" destination="fyw-dl-MIg" id="0bB-ga-IsR"/>
+                                            <outlet property="carTitle" destination="Tnu-EC-HzE" id="8Xr-fx-29B"/>
+                                            <outlet property="mainCarPhoto" destination="9Dz-qI-FrE" id="E1i-5X-n1a"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -93,6 +99,9 @@
                             <constraint firstItem="Z4s-AG-fon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wNI-Jf-b7Q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="carsListCollectionView" destination="Z4s-AG-fon" id="PSw-5g-ouM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
