@@ -22,6 +22,7 @@ class CarsListViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel: CarsListViewModel
+    private var collectionViewColumns: CGFloat = 1
     
     // MARK: - IBOutlets
     @IBOutlet weak var carsListCollectionView: UICollectionView!
@@ -37,7 +38,7 @@ class CarsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCars()
-        setupView()
+        setupCollectionView()
     }
     
     // MARK: - Private setup methods
@@ -46,15 +47,30 @@ class CarsListViewController: UIViewController {
         viewModel.loadData()
     }
     
-    private func setupView() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Cars"
-        setupCollectionView()
-    }
-    
     private func setupCollectionView() {
         carsListCollectionView.dataSource = self
         carsListCollectionView.delegate = self
+        collectionViewColumns = getCollectionViewColumns()
+    }
+    
+    private func getCollectionViewColumns() -> CGFloat {
+        switch view.traitCollection.horizontalSizeClass {
+        case .regular:
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight:
+                return 3
+            default:
+                return 2
+            }
+        default:
+            return 1
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionViewColumns = getCollectionViewColumns()
+        reloadCarsList()
     }
 }
 
@@ -76,21 +92,18 @@ extension CarsListViewController: UICollectionViewDataSource {
     }
 }
 
-// MARK:- UICollectionViewDelegate
-extension CarsListViewController: UICollectionViewDelegate {
-    
-}
-
+// MARK: - UICollectionViewDelegateFlowLayout
 extension CarsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
+        let cellPadding = (collectionViewColumns - 1) * 10
+        let width = (collectionView.frame.width - cellPadding) / collectionViewColumns
         return CGSize(width: width, height: width * 1.1)
     }
 }
 
-// MARK: - MoviesListViewModelDelegate
+// MARK: - CarsListViewModelDelegate
 extension CarsListViewController: CarsListViewModelDelegate {
     func activityIndicator(isShown: Bool) {
         DispatchQueue.main.async {

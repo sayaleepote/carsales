@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z4s-AG-fon">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="10" y="44" width="394" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tjg-b3-oMJ">
                                     <size key="itemSize" width="414" height="312"/>
@@ -30,7 +30,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CarsListCollectionViewCell" id="4IR-HM-wyc" customClass="CarsListCollectionViewCell" customModule="carsales" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
+                                        <rect key="frame" x="-10" y="0.0" width="414" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bvk-7q-JfC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
@@ -101,9 +101,9 @@
                             <constraint firstItem="Z4s-AG-fon" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BMh-i1-hnA"/>
                             <constraint firstItem="NUf-f5-Y1V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WNj-Ad-BPH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z4s-AG-fon" secondAttribute="bottom" id="bXg-H8-BcW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4s-AG-fon" secondAttribute="trailing" id="hTS-ZD-vOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4s-AG-fon" secondAttribute="trailing" constant="10" id="hTS-ZD-vOp"/>
                             <constraint firstItem="NUf-f5-Y1V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tDd-dK-4yY"/>
-                            <constraint firstItem="Z4s-AG-fon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wNI-Jf-b7Q"/>
+                            <constraint firstItem="Z4s-AG-fon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wNI-Jf-b7Q"/>
                         </constraints>
                     </view>
                     <connections>
