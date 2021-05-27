@@ -41,6 +41,11 @@ class CarsListViewController: UIViewController {
         setupCollectionView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionViewColumns = getCollectionViewColumns() 
+    }
+    
     // MARK: - Private setup methods
     private func loadCars() {
         viewModel.delegate = self
@@ -50,7 +55,6 @@ class CarsListViewController: UIViewController {
     private func setupCollectionView() {
         carsListCollectionView.dataSource = self
         carsListCollectionView.delegate = self
-        collectionViewColumns = getCollectionViewColumns()
     }
     
     private func getCollectionViewColumns() -> CGFloat {
@@ -62,11 +66,19 @@ class CarsListViewController: UIViewController {
             default:
                 return 2
             }
+        case .compact:
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight:
+                return 3
+            default:
+                return 1
+            }
         default:
             return 1
         }
     }
     
+    // MARK: - Overridden methods
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionViewColumns = getCollectionViewColumns()
