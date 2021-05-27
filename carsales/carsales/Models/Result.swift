@@ -9,4 +9,8 @@ import Foundation
 
 struct Result: Decodable {
     let result: [Car]
+    
+    enum CodingKeys: String, CodingKey {
+        case result = "Result"
+    }
 }

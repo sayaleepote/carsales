@@ -27,6 +27,7 @@
 		CF758DFE265D7B0900C1D009 /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DFD265D7B0900C1D009 /* CarsListViewController.swift */; };
 		CF758E05265D7C2100C1D009 /* CarsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758E04265D7C2100C1D009 /* CarsListCollectionViewCell.swift */; };
 		CF758E0E265E58B100C1D009 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CF758E0D265E58B100C1D009 /* Kingfisher */; };
+		CF758E14265F874000C1D009 /* CarsListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758E13265F874000C1D009 /* CarsListCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		CF758DF5265D77E400C1D009 /* CarsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewModel.swift; sourceTree = "<group>"; };
 		CF758DFD265D7B0900C1D009 /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
 		CF758E04265D7C2100C1D009 /* CarsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		CF758E13265F874000C1D009 /* CarsListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 		CF758DEB265D74F200C1D009 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CF758E12265F86D000C1D009 /* Cells */,
 				CF758DF5265D77E400C1D009 /* CarsListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -247,6 +250,14 @@
 			isa = PBXGroup;
 			children = (
 				CF758E04265D7C2100C1D009 /* CarsListCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CF758E12265F86D000C1D009 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF758E13265F874000C1D009 /* CarsListCellViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,6 +406,7 @@
 				CF758DD3265D676600C1D009 /* Environment.swift in Sources */,
 				CF758E05265D7C2100C1D009 /* CarsListCollectionViewCell.swift in Sources */,
 				CF758DE7265D69EF00C1D009 /* Result.swift in Sources */,
+				CF758E14265F874000C1D009 /* CarsListCellViewModel.swift in Sources */,
 				CF758DD2265D676600C1D009 /* NetworkError.swift in Sources */,
 				CF758DDF265D67BB00C1D009 /* Car.swift in Sources */,
 				CF758DF6265D77E400C1D009 /* CarsListViewModel.swift in Sources */,
