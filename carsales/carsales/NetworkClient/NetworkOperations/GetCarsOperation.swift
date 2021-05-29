@@ -13,7 +13,7 @@ class GetCarsOperation<Cars>: Operation {
         return CarsalesRequest.getCars
     }
     
-    func execute(in dispatcher: RequestDispatcher,
+    func execute(in dispatcher: RequestDispatcherProtocol,
                  success: @escaping ([Car]) -> Void,
                  failure: @escaping (NetworkError) -> Void) throws {
         try dispatcher.execute(request: request, completion: { response in

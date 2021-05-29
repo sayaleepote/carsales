@@ -11,7 +11,6 @@
 		CF758D82265D5B4300C1D009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF758D80265D5B4300C1D009 /* Main.storyboard */; };
 		CF758D84265D5B4600C1D009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF758D83265D5B4600C1D009 /* Assets.xcassets */; };
 		CF758D87265D5B4600C1D009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF758D85265D5B4600C1D009 /* LaunchScreen.storyboard */; };
-		CF758D92265D5B4600C1D009 /* carsalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758D91265D5B4600C1D009 /* carsalesTests.swift */; };
 		CF758D9D265D5B4600C1D009 /* carsalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758D9C265D5B4600C1D009 /* carsalesUITests.swift */; };
 		CF758DCF265D676600C1D009 /* GetCarsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DC3265D676600C1D009 /* GetCarsOperation.swift */; };
 		CF758DD0265D676600C1D009 /* CarsalesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758DC4265D676600C1D009 /* CarsalesRequest.swift */; };
@@ -28,6 +27,8 @@
 		CF758E05265D7C2100C1D009 /* CarsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758E04265D7C2100C1D009 /* CarsListCollectionViewCell.swift */; };
 		CF758E0E265E58B100C1D009 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CF758E0D265E58B100C1D009 /* Kingfisher */; };
 		CF758E14265F874000C1D009 /* CarsListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758E13265F874000C1D009 /* CarsListCellViewModel.swift */; };
+		CF758E1E2661587F00C1D009 /* CarsListCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758E1D2661587F00C1D009 /* CarsListCellViewModelTests.swift */; };
+		CF758E262661589A00C1D009 /* CarsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF758E252661589A00C1D009 /* CarsListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 		CF758D86265D5B4600C1D009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF758D88265D5B4600C1D009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF758D8D265D5B4600C1D009 /* carsalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carsalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF758D91265D5B4600C1D009 /* carsalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carsalesTests.swift; sourceTree = "<group>"; };
 		CF758D93265D5B4600C1D009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF758D98265D5B4600C1D009 /* carsalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carsalesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF758D9C265D5B4600C1D009 /* carsalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carsalesUITests.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		CF758DFD265D7B0900C1D009 /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
 		CF758E04265D7C2100C1D009 /* CarsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF758E13265F874000C1D009 /* CarsListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCellViewModel.swift; sourceTree = "<group>"; };
+		CF758E1D2661587F00C1D009 /* CarsListCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCellViewModelTests.swift; sourceTree = "<group>"; };
+		CF758E252661589A00C1D009 /* CarsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +144,7 @@
 		CF758D90265D5B4600C1D009 /* carsalesTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF758D91265D5B4600C1D009 /* carsalesTests.swift */,
+				CF758E1B2661580400C1D009 /* ViewModels */,
 				CF758D93265D5B4600C1D009 /* Info.plist */,
 			);
 			path = carsalesTests;
@@ -258,6 +260,23 @@
 			isa = PBXGroup;
 			children = (
 				CF758E13265F874000C1D009 /* CarsListCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CF758E1B2661580400C1D009 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF758E1C2661584A00C1D009 /* Cells */,
+				CF758E252661589A00C1D009 /* CarsListViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CF758E1C2661584A00C1D009 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF758E1D2661587F00C1D009 /* CarsListCellViewModelTests.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -420,7 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF758D92265D5B4600C1D009 /* carsalesTests.swift in Sources */,
+				CF758E1E2661587F00C1D009 /* CarsListCellViewModelTests.swift in Sources */,
+				CF758E262661589A00C1D009 /* CarsListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

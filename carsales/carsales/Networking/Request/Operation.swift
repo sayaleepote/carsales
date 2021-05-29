@@ -12,7 +12,7 @@ protocol Operation {
     associatedtype DecodedModel
     var request: Request { get }
 
-    func execute(in dispatcher: RequestDispatcher,
+    func execute(in dispatcher: RequestDispatcherProtocol,
                  success: @escaping (DecodedModel) -> Void,
                  failure: @escaping (NetworkError) -> Void) throws
 }
